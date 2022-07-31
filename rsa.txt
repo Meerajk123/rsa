@@ -1,0 +1,23 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+    double p,q,msg,e,d,d1;
+    cout<<"Enter the two prime numbers";
+    cin>>p>>q;
+    cout<<"Enter the e value";
+    cin>>e;
+    double n=p*q;
+    double phi=(p-1)*(q-1);
+    d1=1/e;
+    d=fmod(d1,phi);
+     cout<<"Enter the msg value";
+    cin>>msg;
+    double c = pow(msg,e);
+    double m=pow(c,d);
+    c=fmod(c,n);
+    m=fmod(m,n);
+    cout<<"E "<<c;
+    cout<<"D "<<m;
+}
